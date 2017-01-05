@@ -1,9 +1,9 @@
 <script type="text/javascript">
 $('document').ready(function(){
-	dynamic_masthead();
+	dynamic_content();
 	in_the_news_slider();
 	companies_slider();});
-function dynamic_masthead(){
+function dynamic_content(){
 	$theme = getQueryVariable("blm");
 	if($theme){
 		$('#feature-background').css('background-image', 'url("https://blooom-static.s3.amazonaws.com/lp/images/new-years-masthead-4.jpg")');
