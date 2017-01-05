@@ -5,6 +5,7 @@ $('document').ready(function(){
 	companies_slider();});
 function dynamic_content(){
 	$theme = getQueryVariable("blm");
+	$network = getQueryVariable("n");
 	if($theme){
 		$('#feature-background').css('background-image', 'url("https://blooom-static.s3.amazonaws.com/lp/images/new-years-masthead-4.jpg")');
 		$('.sub-headline').css('display', 'block');
@@ -25,6 +26,21 @@ function dynamic_content(){
 				$('#main-headline').html('worry less*');
 		}
 	}else{
+		// no action required
+	}
+	if($network){
+		switch($network){
+			case "f":
+				$dcode = "FACEBOOK";
+				break
+			case "g":
+				$dcode = "GGSEM";
+				break
+			default:
+				$dcode = "FACEBOOK";
+		}
+	}else{
+		// no action required
 	}
 }
 function getQueryVariable(variable){
