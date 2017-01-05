@@ -39,6 +39,8 @@ function dynamic_content(){
 			default:
 				$dcode = "FACEBOOK";
 		}
+		$secure_link_with_dcode = "https://secure.blooom.com/" + $dcode + window.location.search;
+		$("a[href^='https://secure.blooom.com/'], a[href^='https://secure.blooom.com']").attr('href',$secure_link_with_dcode);
 	}else{
 		// no action required
 	}
